@@ -1,1 +1,19 @@
-<p>home works!</p>
+Home Page
+
+
+
+<ul>
+    <li> <a routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
+    <li> <a routerLink="/contact-us" routerLinkActive="active">Contact Us</a> </li>
+</ul>
+
+
+
+<ul>
+    <li *ngFor="let companyDetails of companies;">
+        Name: {{companyDetails.first_name}} {{companyDetails.last_name}} <br> Email: {{companyDetails.email}} <br>
+        <img src="{{companyDetails.avatar}}">
+    </li>
+
+</ul>
