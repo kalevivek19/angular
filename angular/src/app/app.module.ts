@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { HomeService } from './home/home.service';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MyInterceptor } from './my.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [HomeService],
+  providers: [HomeService, { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
