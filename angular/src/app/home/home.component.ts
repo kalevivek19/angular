@@ -7,7 +7,7 @@ import { HomeService } from "./home.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  companies = [];
+  users = [];
   birthDay: any;
   address: any;
   
@@ -18,9 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.homeService.getAllCompanies().subscribe((data: any) => {
-      this.companies = data.data;
-      this.birthDay = new Date(1988, 3, 15); // April 15, 1988
-      this.address = 'pune';      
+      this.users = data;
     })
   }
 
