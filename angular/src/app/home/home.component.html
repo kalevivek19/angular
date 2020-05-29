@@ -5,9 +5,7 @@ Home Page
     <li> <a routerLink="/contact-us" routerLinkActive="active">Contact Us</a> </li>
 </ul>
 <ul>
-    <li *ngFor="let companyDetails of companies;">
-        Name: {{companyDetails.first_name}} {{companyDetails.last_name}} <br> Email: {{companyDetails.email}} <br> Birth Day: {{birthDay | date}}<br> Address : {{address | uppercase}}<br>
-        <img src="{{companyDetails.avatar}}">
+    <li *ngFor="let userDetails of users;">
+        Name: {{userDetails.name}} <br> Email: {{userDetails.email}}<br>
     </li>
-
 </ul>

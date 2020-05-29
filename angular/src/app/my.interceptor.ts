@@ -16,7 +16,7 @@ export class MyInterceptor implements HttpInterceptor {
   constructor() { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log(request);
+    //console.log(request);
     // const requests = request.clone({
     //   url: request.url.replace("https://", "http://")              //To manupulate request
     // });
@@ -26,7 +26,7 @@ export class MyInterceptor implements HttpInterceptor {
       if (responce instanceof HttpResponse) {
         responce = responce.clone({ body: responce.body });            // To get responce
       }
-      console.log(responce);
+      //console.log(responce);
       return responce;
     }));
   }

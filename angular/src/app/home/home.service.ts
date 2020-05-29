@@ -8,7 +8,7 @@ import { Home } from './home';
   providedIn: 'root'
 })
 export class HomeService {
-  apiUrl: string = 'https://reqres.in/api/users?page=1&per_page=10';
+  apiUrl: string = 'http://api.larangular.com/users';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
