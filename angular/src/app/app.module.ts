@@ -9,13 +9,15 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyInterceptor } from './my.interceptor';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutusComponent,
-    ContactusComponent
+    ContactusComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
