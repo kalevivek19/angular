@@ -6,6 +6,6 @@ Home Page
 </ul>
 <ul>
     <li *ngFor="let userDetails of users;">
-        Name: {{userDetails.name}} <br> Email: {{userDetails.email}}<br>
+        Name: {{userDetails.name}} <br> Email: {{userDetails.email}} <a href="javascript:void(0)" (click)="deleteUser(userDetails.id)">Delete</a><br>
     </li>
 </ul>
