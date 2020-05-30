@@ -2,23 +2,23 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Home } from './home';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomeService {
-  apiUrl: string = 'http://api.larangular.com/users';
+  private userUrl: string = environment.apiUrl + 'users';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get(this.apiUrl);
+    return this.http.get(this.userUrl);
   }
-  
+
   deleteUser(strUserId) {
-    return this.http.delete(this.apiUrl+'/'+strUserId);
+    return this.http.delete(this.userUrl + '/' + strUserId);
   }
 
 
