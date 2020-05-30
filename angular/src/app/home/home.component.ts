@@ -10,16 +10,29 @@ export class HomeComponent implements OnInit {
   users = [];
   birthDay: any;
   address: any;
-  
+
 
   constructor(
     private homeService: HomeService
   ) { }
 
   ngOnInit() {
-    this.homeService.getAllCompanies().subscribe((data: any) => {
+    this.getAllUsers();
+  }
+
+
+  getAllUsers() {
+    this.homeService.getUsers().subscribe((data: any) => {
       this.users = data;
-    })
+    });
+  }
+
+  deleteUser(strUserId) {
+    this.homeService.deleteUser(strUserId).subscribe((data: any) => {
+      if (data.success) {
+        this.getAllUsers();
+      }
+    });
   }
 
 }

@@ -13,8 +13,13 @@ export class HomeService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCompanies() {
+  getUsers() {
     return this.http.get(this.apiUrl);
   }
+  
+  deleteUser(strUserId) {
+    return this.http.delete(this.apiUrl+'/'+strUserId);
+  }
+
 
 }
