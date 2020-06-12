@@ -22,15 +22,11 @@ export class HomeComponent implements OnInit {
 
 
   getAllUsers() {
-
     this.homeService.addUser().subscribe((data: any) => {
-      //this.users = data;
       this.homeService.getUsers().subscribe((data: any) => {
         this.users = data;
       });
     });
-
-    
   }
 
   deleteUser(strUserId) {
