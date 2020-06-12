@@ -17,6 +17,10 @@ export class HomeService {
     return this.http.get(this.userUrl);
   }
 
+  addUser(){
+    return this.http.post(this.userUrl,'');
+  }
+
   deleteUser(strUserId) {
     return this.http.delete(this.userUrl + '/' + strUserId);
   }
