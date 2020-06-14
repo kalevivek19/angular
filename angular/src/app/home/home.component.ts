@@ -26,6 +26,12 @@ export class HomeComponent implements OnInit {
         this.users = data;
       });
   }
+  
+  addUser() {
+      this.homeService.addUser().subscribe((data: any) => {
+        this.getAllUsers();
+      });
+  }
 
   deleteUser(strUserId) {
     this.homeService.deleteUser(strUserId).subscribe((data: any) => {
