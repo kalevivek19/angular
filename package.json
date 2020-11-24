@@ -9,8 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "preinstall": "npm install -g angular-cli",
-    "pretest": "npm run lint",
-    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot",
+    "postinstall": "ng build && mv dist/* .",
     "update": "ng update --style scss --prefix xc"
   },
   "private": true,
