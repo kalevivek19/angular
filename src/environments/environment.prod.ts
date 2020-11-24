@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://api.larangular.com/',
+  apiUrl: 'https://reqres.in/api/users?page=1',
 };
