@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://api.larangular.com/',
+  apiUrl: 'https://api.lumongo.com/',
 };
 
 /*

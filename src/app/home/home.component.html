@@ -1,13 +1,10 @@
 Home Page
-<ul>
-    <li> <a routerLink="/" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/about-us" routerLinkActive="active">About Us</a></li>
-    <li> <a routerLink="/contact-us" routerLinkActive="active">Contact Us</a> </li>
-</ul>
+
 <div><a (click)="addUser()" href="javascript:void(0)">Add User</a></div>
 <ul>
     <li *ngFor="let userDetails of users;">
         Name: {{userDetails.first_name}} {{userDetails.last_name}}<br> Email: {{userDetails.email}} 
-        <a href="javascript:void(0)" (click)="deleteUser(userDetails.id)">Delete</a><br>
+        <a href="javascript:void(0)" (click)="deleteUser(userDetails._id)">Delete</a><br>
     </li>
 </ul>
+

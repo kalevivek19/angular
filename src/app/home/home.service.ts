@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class HomeService {
-  private userUrl: string = environment.apiUrl + 'users';
+  private userUrl: string = environment.apiUrl + 'peoples';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
