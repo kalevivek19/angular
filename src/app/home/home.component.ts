@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   getAllUsers() {
       this.homeService.getUsers().subscribe((data: any) => {
-        this.users = data;
+        this.users = data.data;
       });
   }
   
