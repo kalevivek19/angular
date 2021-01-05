@@ -3,7 +3,7 @@ Home Page
 <div><a (click)="addUser()" href="javascript:void(0)">Add User</a></div>
 <ul>
     <li *ngFor="let userDetails of users;">
-        Name: {{userDetails.first_name}} {{userDetails.last_name}}<br> Email: {{userDetails.email}} 
+        Name: {{userDetails.first_name}} {{userDetails.last_name}}<br> Email Address: {{userDetails.email}} 
         <a href="javascript:void(0)" (click)="deleteUser(userDetails._id)">Delete</a><br>
     </li>
 </ul>
